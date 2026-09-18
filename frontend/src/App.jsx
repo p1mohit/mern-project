@@ -1,17 +1,19 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import "./style/app.css";
+import Navbar from "./components/Navbar";
+import AddTask from "./components/AddTask";
+import List from "./components/List";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-  <>
-  <h1>To Do App</h1>
-  </>
-  )
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<List />} />
+        <Route path="/add" element={<AddTask />} />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
