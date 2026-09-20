@@ -7,9 +7,7 @@ export default function AddTask() {
   const navigate = useNavigate();
   const handleAddTask = async (event) => {
     event.preventDefault();
-
     console.log(taskdata);
-
     let result = await fetch("http://localhost:3200/add-task", {
       method: "POST",
       body: JSON.stringify(taskdata),
@@ -24,7 +22,6 @@ export default function AddTask() {
       console.log("New task added");
     }
   };
-
   return (
     <div className="container">
       <h1>Add New Task</h1>
@@ -44,9 +41,7 @@ export default function AddTask() {
           id="title"
           placeholder="Enter New Task"
         />
-
         <label htmlFor="description">Description</label>
-
         <textarea
           onChange={(event) =>
             setTaskData({
@@ -59,7 +54,6 @@ export default function AddTask() {
           name="description"
           placeholder="Enter description"
         />
-
         <button className="submit" type="submit">
           Add New Task
         </button>
