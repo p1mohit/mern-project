@@ -11,15 +11,18 @@ export default function AddTask() {
     let result = await fetch("http://localhost:3200/add-task", {
       method: "POST",
       body: JSON.stringify(taskdata),
+      credentials: 'include',
       headers: {
         "Content-Type": "application/json",
-      },
+       // Authorization: "Bearer " + localStorage.getItem("token"),
+      }
     });
-
     result = await result.json();
     if (result.success) {
-       navigate('/')
+      navigate('/')
       console.log("New task added");
+    } else {
+      alert("try after sometime")
     }
   };
   return (

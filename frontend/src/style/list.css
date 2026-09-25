@@ -4,7 +4,7 @@
     list-style: none;
     padding:0;
     margin: 20px;
-    grid-template-columns: 70px 50px 2fr 3fr 170px ;
+    grid-template-columns: 70px 50px 2fr 3fr  180px;
 }
 .list-header{
     font-weight: bold;
@@ -49,4 +49,27 @@
 }
 .update-item:hover{
     background-color:#15b15b ;
+}
+.list-container{
+margin-left:20px;
+margin-right: 20px;
+}
+.delete-multiple{
+    width:100px;
+}
+.top-delete{
+    width: 100px;
+    display:inline-block;
+    margin-left: 19px;
+    padding: 6px 12px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius:4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.top-delete:hover{
+    background-color:#960808 ;
+
 }

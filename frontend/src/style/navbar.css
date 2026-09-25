@@ -16,10 +16,22 @@
     gap: 20px;
 }
 .nav-links a{
-    color: #fff;
+    color:whitesmoke;
     text-decoration: none;
     font-weight: 500;
 }
 .nav-links a:hover{
     color: #bfbcbc;
+}
+.nav-links button{
+    background: none;
+    border:none;
+    margin: 0%;
+    padding:0;
+    color:whitesmoke;
+    font-weight:600;
+}
+.nav-links button:hover{
+    color: #bfbcbc;
+    background: none;
 }

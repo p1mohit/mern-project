@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import "../style/addtask.css";
 import { useNavigate, useParams } from "react-router-dom";
@@ -11,7 +10,9 @@ export default function UpdateTask() {
     getTask(id);
   }, [id]);
   const getTask = async (id) => {
-    const response= await fetch(`http://localhost:3200/task/${id}`);
+    const response= await fetch(`http://localhost:3200/task/${id}`,{
+      credentials:"include",
+    })
 
       const task = await response.json();
 
@@ -21,8 +22,9 @@ export default function UpdateTask() {
   };
 const UpdateTask = async () => {
   console.log("function called", taskdata);
-  const response = await fetch(`http://localhost:3200/task/${id}`, {
+  const response = await fetch(`http://localhost:3200/task/${id}`,{
     method: "PUT",
+    credentials:"include",
     headers: {
       "Content-Type": "application/json",
     },
